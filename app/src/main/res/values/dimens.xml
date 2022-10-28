@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_sheet_corner_radius_10">10dp</dimen>
+    <dimen name="bottom_sheet_top_padding_10">10dp</dimen>
+
+    <!--TEXT-->
+    <dimen name="text_xxsmall_size_6">6sp</dimen>
+    <dimen name="text_xxsmall_size_8">8sp</dimen>
+    <dimen name="text_xxsmall_size_9">9sp</dimen>
+    <dimen name="text_xsmall_size_10">10sp</dimen>
+    <dimen name="text_xsmall_size_11">11sp</dimen>
+    <dimen name="text_small_size_12">12sp</dimen>
+    <dimen name="text_small_size_13">13sp</dimen>
+    <dimen name="text_medium_size_14">14sp</dimen>
+    <dimen name="text_medium_size_15">15sp</dimen>
+    <dimen name="text_xmedium_size_16">16sp</dimen>
+    <dimen name="text_xmedium_size_17">17sp</dimen>
+    <dimen name="text_xmedium_size_18">18sp</dimen>
+    <dimen name="text_large_size_20">20sp</dimen>
+    <dimen name="text_large_size_22">22sp</dimen>
+    <dimen name="text_xlarge_size_24">24sp</dimen>
+    <dimen name="text_xlarge_size_26">26sp</dimen>
+    <dimen name="text_xlarge_size_28">28sp</dimen>
+    <dimen name="text_xxlarge_size_30">30sp</dimen>
+    <dimen name="text_xxxlarge_size_40">40sp</dimen>
+
+    <!--LAYOUT MARGIN-->
+    <dimen name="margin_xsmall_size_2">2dp</dimen>
+    <dimen name="margin_xsmall_size_3">3dp</dimen>
+    <dimen name="margin_small_size_4">4dp</dimen>
+    <dimen name="margin_small_size_5">5dp</dimen>
+    <dimen name="margin_xsmall_size">2dp</dimen>
+    <dimen name="margin_small_size_6">6dp</dimen>
+    <dimen name="margin_small_7">7dp</dimen>
+    <dimen name="margin_small_8">8dp</dimen>
+    <dimen name="margin_small_9">9dp</dimen>
+    <dimen name="margin_medium_small_size_10">10dp</dimen>
+    <dimen name="margin_medium_small_size_11">11dp</dimen>
+    <dimen name="margin_medium_small_size_12">12dp</dimen>
+    <dimen name="margin_medium_small_size_13">13dp</dimen>
+    <dimen name="margin_medium_size_14">14dp</dimen>
+    <dimen name="margin_medium_size_15">15dp</dimen>
+    <dimen name="margin_medium_size_16">16dp</dimen>
+    <dimen name="margin_medium_size_17">17dp</dimen>
+    <dimen name="margin_medium_size_18">18dp</dimen>
+    <dimen name="margin_xmedium_size_19">19dp</dimen>
+    <dimen name="margin_xmedium_size_20">20dp</dimen>
+    <dimen name="margin_xmedium_size_21">21dp</dimen>
+    <dimen name="margin_xmedium_size_22">22dp</dimen>
+    <dimen name="margin_xmedium_size_23">23dp</dimen>
+    <dimen name="margin_xmedium_size_23.5">23.5dp</dimen>
+    <dimen name="margin_xmedium_size_24">24dp</dimen>
+    <dimen name="margin_xmedium_size_25">25dp</dimen>
+    <dimen name="margin_xmedium_size_26">26dp</dimen>
+    <dimen name="margin_xmedium_size_27">27dp</dimen>
+    <dimen name="margin_xmedium_size_28">28dp</dimen>
+    <dimen name="margin_xmedium_size_28.5">28.5dp</dimen>
+    <dimen name="margin_xmedium_size_29">29dp</dimen>
+    <dimen name="margin_xmedium_size_30">30dp</dimen>
+    <dimen name="margin_xmedium_size_31">31dp</dimen>
+    <dimen name="margin_xmedium_size_32">32dp</dimen>
+    <dimen name="margin_xmedium_size_33">33dp</dimen>
+    <dimen name="margin_xmedium_size_34">34dp</dimen>
+    <dimen name="margin_xmedium_size_36">36dp</dimen>
+    <dimen name="margin_xmedium_size_37">37dp</dimen>
+    <dimen name="margin_xmedium_size_38">38dp</dimen>
+    <dimen name="margin_large_size_35">35dp</dimen>
+    <dimen name="margin_large_size_39">39dp</dimen>
+    <dimen name="margin_large_size_44">44dp</dimen>
+    <dimen name="margin_large_size_45">45dp</dimen>
+    <dimen name="margin_large_size_48">48dp</dimen>
+    <dimen name="margin_large_size_49">49dp</dimen>
+    <dimen name="margin_xxlarge_size_72">72dp</dimen>
+    <dimen name="margin_xxlarge_size_74">74dp</dimen>
+    <dimen name="margin_xxlarge_size_77">77dp</dimen>
+    <dimen name="margin_xxlarge_size_78">78dp</dimen>
+    <dimen name="margin_xxlarge_size_86">86dp</dimen>
+    <dimen name="margin_xxxlarge_size_114">114dp</dimen>
+    <dimen name="margin_large_size">35dp</dimen>
+    <dimen name="margin_xlarge_size_40">40dp</dimen>
+    <dimen name="margin_xlarge_size_42">42dp</dimen>
+    <!--    <dimen name="margin_xlarge_size_55">55dp</dimen>-->
+    <dimen name="margin_xlarge_size_56">56dp</dimen>
+    <dimen name="margin_xlarge_size_58">58dp</dimen>
+    <dimen name="margin_xlarge_size_59">59dp</dimen>
+    <dimen name="margin_xxlarge_size_60">60dp</dimen>
+    <dimen name="margin_xxlarge_size_65">65dp</dimen>
+    <dimen name="margin_xxlarge_size_68">68dp</dimen>
+    <dimen name="margin_xxlarge_size_80">80dp</dimen>
+    <dimen name="margin_xlarge_size_43">43dp</dimen>
+    <dimen name="margin_xlarge_size_44">44dp</dimen>
+    <dimen name="margin_xlarge_size_46">46dp</dimen>
+    <dimen name="margin_xlarge_size_47">47dp</dimen>
+    <dimen name="margin_xlarge_size_50">50dp</dimen>
+    <dimen name="margin_xxlarge_size_66">66dp</dimen>
+    <dimen name="margin_xxlarge_size">60dp</dimen>
+    <dimen name="margin_xxlarge_size_82">82dp</dimen>
+    <dimen name="margin_xxlarge_size_84">84dp</dimen>
+    <dimen name="margin_xxlarge_size_70">70dp</dimen>
+    <dimen name="margin_xxlarge_size_85">85dp</dimen>
+    <dimen name="margin_xxlarge_size_93">93dp</dimen>
+    <dimen name="margin_xxxlarge_size_116">116dp</dimen>
+    <dimen name="margin_xxxlarge_size_118">118dp</dimen>
+    <dimen name="margin_xxxlarge_size_92">92dp</dimen>
+    <dimen name="margin_xxxlarge_size_120">120dp</dimen>
+    <dimen name="margin_xxxlarge_size_127">127dp</dimen>
+    <dimen name="margin_xxxlarge_size134">134dp</dimen>
+    <dimen name="margin_xxxlarge_size135">135dp</dimen>
+    <dimen name="margin_xxxlarge_size150">150dp</dimen>
+    <dimen name="margin_xxxlarge_size152">152dp</dimen>
+    <dimen name="margin_xxxlarge_size168">168dp</dimen>
+    <dimen name="margin_xxxlarge_size170">170dp</dimen>
+    <dimen name="margin_xxxlarge_size180">180dp</dimen>
+    <dimen name="margin_xxxlarge_size304">304dp</dimen>
+    <dimen name="margin_xxxlarge_size190">190dp</dimen>
+
+    <!--CORNER RADIUS-->
+    <dimen name="card_small_size_10">10dp</dimen>
+    <dimen name="card_medium_size_22">22dp</dimen>
+    <dimen name="card_large_size_200">200dp</dimen>
+
+    <!--Width-->
+    <dimen name="width_small_20">20dp</dimen>
+    <dimen name="width_medium_136">136dp</dimen>
+    <dimen name="width_medium_100">100dp</dimen>
+    <dimen name="width_large_200">200dp</dimen>
+    <dimen name="width_large_228">228dp</dimen>
+    <dimen name="width_large_232">232dp</dimen>
+    <dimen name="width_large_250">250dp</dimen>
+    <dimen name="width_large_280">280dp</dimen>
+    <dimen name="width_xlarge_300">300dp</dimen>
+    <dimen name="width_xlarge_312">312dp</dimen>
+
+    <!--Height-->
+    <dimen name="height_xsmall_1">1dp</dimen>
+    <dimen name="height_xsmall_2">2dp</dimen>
+    <dimen name="height_xmedium_30">30dp</dimen>
+    <dimen name="height_xmedium_31">31dp</dimen>
+    <dimen name="height_xmedium_42">42dp</dimen>
+    <dimen name="height_xmedium_46">46dp</dimen>
+    <dimen name="height_large_62">62dp</dimen>
+    <dimen name="height_large_113">113dp</dimen>
+    <dimen name="height_large_227.91">227.91dp</dimen>
+
+    <!--Padding-->
+    <dimen name="padding_small_8">8dp</dimen>
+    <dimen name="padding_large_134">134dp</dimen>
+
+</resources>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AplikasiPresensi</string>
+    <string name="email">Email</string>
+    <string name="nrp">NRP</string>
+    <string name="hint_nrp">Contoh : 1272009</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="login_as_teacher">Login as Teacher</string>
+    <string name="welcome">Welcome,\t</string>
+    <string name="search">Search</string>
+    <string name="cource_code">Course Code</string>
+    <string name="cource_name">Course Name</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

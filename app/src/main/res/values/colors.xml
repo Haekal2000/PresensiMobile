@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="blue_hicolleagues">#000080</color>
+    <color name="yellow_hicolleagues_1">#FFDE59</color>
+    <color name="yellow_hicolleagues">#eec762</color>
+    <color name="lemonchiffon">#FFFACD</color>
+
+    <color name="pale_grey">#eeeffa</color>
+    <color name="line">#d3d6e1</color>
+    <color name="gray_light">#f5f6fa</color>
+    <color name="gray_white">#f7f9fd</color>
+    <color name="gray_darker">#7b7e8c</color>
+    <color name="gray_more_darker">#575966</color>
+    <color name="gray_lighter">#e7e8f0</color>
+    <color name="red_error">#ec410b</color>
+    <color name="gray_black">#36373f</color>
+    <color name="light_gray">#190d1c71</color>
+    <color name="gray_button">#acafbf</color>
+    <color name="rust">#a83f0b</color>
+
+    <color name="azure">#179eff</color>
+    <color name="sapphire">#162ca2</color>
+    <color name="new_blue_soft">#f1f6ff</color>
+    <color name="denim_blue">#70b8ff</color>
+    <color name="seafoam_blue">#51d6b5</color>
+    <color name="culture">#f5f7fa</color>
+    <color name="rust_red">#a91400</color>
+    <color name="pumpkin">#ed8e00</color>
+    <color name="ghost_white">#f7f9fd</color>
+
+    <color name="sandy_yellow">#fee77c</color>
+    <color name="golden_yellow">#ffc122</color>
+    <color name="hex_gray85">#D9D9D9</color>
+    <color name="vivid_cerise">#20E084</color>
+    <color name="green">#2DF842</color>
+</resources>
