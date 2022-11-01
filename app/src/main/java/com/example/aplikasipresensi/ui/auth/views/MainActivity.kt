@@ -42,6 +42,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 is Resource.Success -> {
                     it.value.data?.token?.let { it1 -> viewModelUser.setToken(it1) }
                     it.value.data?.userData?.nrpId?.let { it2 -> viewModelUser.setNrpId(it2) }
+                    it.value.data?.userData?.name?.let { it3 -> viewModelUser.setName(it3) }
+                    it.value.data?.userData?.departmentId?.let { it4 -> viewModelUser.setDepartmentId(it4) }
+                    it.value.data?.userData?.academicPeriodId?.let { it5 -> viewModelUser.setAcademicPeriodId(it5) }
                     goToActivityClearAllStack(HomeActivity::class.java, null)
                     Log.e("tokenTesting", it.value.data?.token.toString())
                     Log.e("NRPID", it.value.data?.userData?.nrpId.toString())

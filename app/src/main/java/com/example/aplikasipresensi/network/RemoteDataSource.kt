@@ -23,7 +23,8 @@ class RemoteDataSource (context: Context) {
                 var userPreference = runBlocking { pref.getToken.first() }
             Log.e("tokens", userPreference)
             request = request.newBuilder()
-                .addHeader("Authorization", "Bearer ${userPreference}")
+//                .addHeader("Authorization", "Bearer ${userPreference}")
+                .addHeader("authentication", "Bearer ${userPreference}")
                 .build()
 
             val response = chain.proceed(request)

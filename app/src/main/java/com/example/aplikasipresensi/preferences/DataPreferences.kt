@@ -76,6 +76,17 @@ class DataPreferences(
         }
     }
 
+    val getAcademicPeriodId: Flow<String>
+    get() = dataStore.data.map { p ->
+        p[ACADEMICPERIODID] ?:""
+    }
+
+    suspend fun setAcademicPeriodId(value: String){
+        dataStore.edit { p ->
+            p[ACADEMICPERIODID] = value
+        }
+    }
+
     val getImage: Flow<String>
     get() = dataStore.data.map { p ->
         p[IMAGE] ?: ""
@@ -93,6 +104,7 @@ class DataPreferences(
         private val NAME = preferencesKey<String>("name")
         private val DEPARTMENTID = preferencesKey<String>("department_id")
         private val DEPARTMENTNAME = preferencesKey<String>("departmentName")
+        private val ACADEMICPERIODID = preferencesKey<String>("academic_period_id")
         private val IMAGE = preferencesKey<String>("image")
     }
 }

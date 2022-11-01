@@ -21,4 +21,16 @@ class UserRepository(
     suspend fun setNrpId(nrpId: String) {
         preference.setNrpId(nrpId)
     }
+
+    suspend fun setName(name: String) {
+        preference.setName(name)
+    }
+
+    suspend fun setDepartmentId(departmentId: String) {
+        preference.setDepartmentId(departmentId)
+    }
+
+    suspend fun setAcademicPeriodId(academicPeriodId: String) {
+        preference.setAcademicPeriodId(academicPeriodId)
+    }
 }
