@@ -4,7 +4,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.aplikasipresensi.R
 import com.example.aplikasipresensi.databinding.ItemCourseBinding
@@ -35,7 +34,7 @@ class CourseAdapter(val context: Context): RecyclerView.Adapter<CourseAdapter.Co
     fun setCourse(data: List<CourseModel>) {
         course.clear()
         course.addAll(data)
-        notifyItemChanged(0)
+        notifyDataSetChanged()
     }
 
     fun getCourse(): MutableList<CourseModel> {

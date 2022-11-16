@@ -37,7 +37,7 @@
                     android:textSize="@dimen/text_large_size_20" />
 
                 <TextView
-                    android:id="@+id/tv_user_name"
+                    android:id="@+id/tv_user_nrp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_xmedium_size_33"
@@ -92,6 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_medium_size_16"
         android:layout_marginTop="@dimen/margin_xmedium_size_30"
+        android:layout_marginBottom="@dimen/margin_xlarge_size_50"
         android:layout_marginRight="@dimen/margin_medium_size_16"
         android:orientation="vertical"
         tools:listitem="@layout/item_course" />

@@ -20,16 +20,13 @@ import com.example.aplikasipresensi.repository.CourseRepository
 import com.example.aplikasipresensi.ui.home.viewmodel.CourseViewModel
 import com.example.aplikasipresensi.util.CORE_BASE_URL
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 
 class StudentFragment : BaseFragment<FragmentStudentBinding>() {
     private lateinit var courseAdapter: CourseAdapter
     lateinit var viewModelCourse: CourseViewModel
-    var departmentId = runBlocking {  }
-    var academicPeriodId = ""
-
     val courseLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
-    val temporaryCourse = mutableListOf<CourseModel>()
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -45,7 +42,7 @@ class StudentFragment : BaseFragment<FragmentStudentBinding>() {
 
     fun initView() {
         prefs.getNrpId.asLiveData().observe(requireActivity(), Observer {
-            bind.tvUserName.text = it
+            bind.tvUserNrp.text = it
             Log.e("nama", prefs.getNrpId.toString())
         })
 
@@ -56,10 +53,7 @@ class StudentFragment : BaseFragment<FragmentStudentBinding>() {
         viewModelCourse.courseResponse.observe(requireActivity()) {
             when(it) {
                 is Resource.Success -> {
-//                    courseAdapter.setCourse(temporaryCourse)
-//                    bind.tvWelcomeUser.text = temporaryCourse[0].name
                     courseAdapter.setCourse(it.value.data!!)
-//                    it.value.data?.let { it1 -> courseAdapter.setCourse(it1) }
                     Snackbar.make(bind.llStudentFragment, "rv muncul", Snackbar.LENGTH_LONG).show()
                 }
                 is Resource.Failure -> {
