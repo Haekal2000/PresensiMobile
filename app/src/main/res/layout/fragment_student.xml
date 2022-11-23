@@ -86,15 +86,20 @@
             app:queryHint="@string/search" />
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_course"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_medium_size_16"
-        android:layout_marginTop="@dimen/margin_xmedium_size_30"
-        android:layout_marginBottom="@dimen/margin_xlarge_size_50"
-        android:layout_marginRight="@dimen/margin_medium_size_16"
-        android:orientation="vertical"
-        tools:listitem="@layout/item_course" />
+        android:orientation="vertical">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium_size_16"
+            android:layout_marginTop="@dimen/margin_xmedium_size_30"
+            android:layout_marginRight="@dimen/margin_medium_size_16"
+            android:layout_marginBottom="@dimen/margin_xlarge_size_50"
+            android:orientation="vertical"
+            tools:listitem="@layout/item_course" />
+    </LinearLayout>
 </LinearLayout>
