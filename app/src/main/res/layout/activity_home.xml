@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/margin_medium_size_16"
-            android:background="@drawable/bg_trasnparent"
+            android:background="@drawable/transparent_rect"
             app:menu="@menu/bottom_navigation" />
     </com.google.android.material.bottomappbar.BottomAppBar>
 

@@ -1,6 +1,7 @@
 package com.example.aplikasipresensi.ui.home.views
 
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -37,6 +38,8 @@ class StudentFragment : BaseFragment<FragmentStudentBinding>() {
         initAction()
     }
 
+    fun Int.dpToPx(displayMetrics: DisplayMetrics): Int = (this * displayMetrics.density).toInt()
+
     fun setInit() {
         val courseRepo = CourseRepository(remoteDataSource.buildApi(CourseApi::class.java, CORE_BASE_URL))
         viewModelCourse = CourseViewModel(courseRepo)
@@ -52,10 +55,12 @@ class StudentFragment : BaseFragment<FragmentStudentBinding>() {
         courseAdapter = CourseAdapter(requireContext())
         bind.rvCourse.adapter = courseAdapter
         viewModelCourse.getListCourse("46c0d3ec-0063-4f26-8f14-6be3bbe99f07", "28104643-57bb-466b-9a68-091f3322c450")
+        Log.e("LISSTTTT", viewModelCourse.getListCourse("46c0d3ec-0063-4f26-8f14-6be3bbe99f07", "28104643-57bb-466b-9a68-091f3322c450").toString())
         viewModelCourse.courseResponse.observe(requireActivity()) {
             when(it) {
                 is Resource.Success -> {
-                    courseAdapter.setCourse(it.value.data!!)
+                    it.value.data?.let { it1 ->  courseAdapter.setCourse(it1)}
+//                    courseAdapter.setCourse(it.value.data!!)
                     Snackbar.make(bind.llStudentFragment, "rv muncul", Snackbar.LENGTH_LONG).show()
                 }
                 is Resource.Failure -> {

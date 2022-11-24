@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.aplikasipresensi.R
 import com.example.aplikasipresensi.databinding.ItemCourseBinding
@@ -25,16 +26,30 @@ class CourseAdapter(val context: Context): RecyclerView.Adapter<CourseAdapter.Co
 
     override fun onBindViewHolder(holder: CourseAdapter.CourseViewHolder, position: Int) {
         holder.bindModel(course[position])
+        //tambahan
+//        holder.setIsRecyclable(false)
+//        holder.bindModel(course[0])
     }
+
+    //tambahan
+//    override fun getItemViewType(position: Int): Int {
+//        return position
+//    }
 
     override fun getItemCount(): Int {
         return course.size
     }
 
+    //tambahan
+//    override fun getItemId(position: Int): Long {
+//        return position.toLong()
+//    }
+
     fun setCourse(data: List<CourseModel>) {
         course.clear()
         course.addAll(data)
         notifyDataSetChanged()
+//        notifyItemChanged(0)
     }
 
     fun getCourse(): MutableList<CourseModel> {
@@ -42,17 +57,28 @@ class CourseAdapter(val context: Context): RecyclerView.Adapter<CourseAdapter.Co
     }
 
     inner class CourseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val bind: ItemCourseBinding
-        init {
-            bind = ItemCourseBinding.bind(itemView)
-        }
+        val tvCourseCode: TextView = itemView.findViewById(R.id.tv_course_code)
+        val tvCourseName: TextView = itemView.findViewById(R.id.tv_course_name)
+        val tvDay: TextView = itemView.findViewById(R.id.tv_day)
+        val tvHours: TextView = itemView.findViewById(R.id.tv_hours)
+        val tvRoom: TextView = itemView.findViewById(R.id.tv_room)
+//        private val bind: ItemCourseBinding
+//        init {
+//            bind = ItemCourseBinding.bind(itemView)
+//        }
 
         fun bindModel(c: CourseModel) {
-            bind.tvCourseCode.text = c.id
-            bind.tvCourseName.text = c.name
-            bind.tvDay.text = c.day
-            bind.tvHours.text = c.hours
-            bind.tvRoom.text = c.room
+            tvCourseCode.text = c.id
+            tvCourseName.text = c.name
+            tvDay.text = c.day
+            tvHours.text = c.hours
+            tvRoom.text = c.room
+
+//            bind.tvCourseCode.text = c.id
+//            bind.tvCourseName.text = c.name
+//            bind.tvDay.text = c.day
+//            bind.tvHours.text = c.hours
+//            bind.tvRoom.text = c.room
         }
 
         init {
