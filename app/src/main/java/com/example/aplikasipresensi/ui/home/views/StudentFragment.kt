@@ -14,6 +14,7 @@ import com.example.aplikasipresensi.adapter.CourseAdapter
 import com.example.aplikasipresensi.api.CourseApi
 import com.example.aplikasipresensi.base.BaseFragment
 import com.example.aplikasipresensi.databinding.FragmentStudentBinding
+import com.example.aplikasipresensi.listener.OnItemClickListener
 import com.example.aplikasipresensi.model.course.CourseModel
 import com.example.aplikasipresensi.network.Resource
 import com.example.aplikasipresensi.repository.CourseRepository
@@ -33,6 +34,7 @@ class StudentFragment : BaseFragment<FragmentStudentBinding>() {
 
         setInit()
         initView()
+        initAction()
     }
 
     fun setInit() {
@@ -63,6 +65,21 @@ class StudentFragment : BaseFragment<FragmentStudentBinding>() {
                 }
             }
         }
+    }
+
+    fun initAction() {
+        courseAdapter.setOnSelectedListener(object : OnItemClickListener{
+            override fun onItemClick(itemView: View, position: Int) {
+                var bundle = Bundle()
+                bundle.putString("courses", courseAdapter.getCourse().get(position))
+                goToActivity()
+            }
+
+            override fun onItemLongClick(itemView: View, position: Int): Boolean {
+                TODO("Not yet implemented")
+            }
+
+        })
     }
 
     override fun getFragmentBinding(inflater: LayoutInflater, container: ViewGroup?) = FragmentStudentBinding.inflate(inflater,container, false)

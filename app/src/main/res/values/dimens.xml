@@ -25,6 +25,7 @@
     <dimen name="text_xxxlarge_size_40">40sp</dimen>
 
     <!--LAYOUT MARGIN-->
+    <dimen name="margin_xsmall_size_1">1dp</dimen>
     <dimen name="margin_xsmall_size_2">2dp</dimen>
     <dimen name="margin_xsmall_size_3">3dp</dimen>
     <dimen name="margin_small_size_4">4dp</dimen>
