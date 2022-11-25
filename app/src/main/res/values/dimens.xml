@@ -22,6 +22,7 @@
     <dimen name="text_xlarge_size_26">26sp</dimen>
     <dimen name="text_xlarge_size_28">28sp</dimen>
     <dimen name="text_xxlarge_size_30">30sp</dimen>
+    <dimen name="text_xxlarge_size_32">32sp</dimen>
     <dimen name="text_xxxlarge_size_40">40sp</dimen>
 
     <!--LAYOUT MARGIN-->
@@ -85,6 +86,7 @@
     <dimen name="margin_xlarge_size_58">58dp</dimen>
     <dimen name="margin_xlarge_size_59">59dp</dimen>
     <dimen name="margin_xxlarge_size_60">60dp</dimen>
+    <dimen name="margin_xxlarge_size_62">62dp</dimen>
     <dimen name="margin_xxlarge_size_65">65dp</dimen>
     <dimen name="margin_xxlarge_size_68">68dp</dimen>
     <dimen name="margin_xxlarge_size_80">80dp</dimen>
@@ -94,10 +96,10 @@
     <dimen name="margin_xlarge_size_47">47dp</dimen>
     <dimen name="margin_xlarge_size_50">50dp</dimen>
     <dimen name="margin_xxlarge_size_66">66dp</dimen>
-    <dimen name="margin_xxlarge_size">60dp</dimen>
     <dimen name="margin_xxlarge_size_82">82dp</dimen>
     <dimen name="margin_xxlarge_size_84">84dp</dimen>
     <dimen name="margin_xxlarge_size_70">70dp</dimen>
+    <dimen name="margin_xxlarge_size_73">73dp</dimen>
     <dimen name="margin_xxlarge_size_85">85dp</dimen>
     <dimen name="margin_xxlarge_size_93">93dp</dimen>
     <dimen name="margin_xxxlarge_size_116">116dp</dimen>
@@ -109,8 +111,10 @@
     <dimen name="margin_xxxlarge_size135">135dp</dimen>
     <dimen name="margin_xxxlarge_size150">150dp</dimen>
     <dimen name="margin_xxxlarge_size152">152dp</dimen>
+    <dimen name="margin_xxxlarge_size153">153dp</dimen>
     <dimen name="margin_xxxlarge_size168">168dp</dimen>
     <dimen name="margin_xxxlarge_size170">170dp</dimen>
+    <dimen name="margin_xxxlarge_size176">176dp</dimen>
     <dimen name="margin_xxxlarge_size180">180dp</dimen>
     <dimen name="margin_xxxlarge_size304">304dp</dimen>
     <dimen name="margin_xxxlarge_size190">190dp</dimen>

@@ -12,14 +12,11 @@
 
         <TextView
             android:id="@+id/tv_percent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/margin_xxlarge_size_73"
+            android:layout_height="@dimen/margin_xxlarge_size_73"
             android:background="@drawable/bg_round"
             android:fontFamily="@font/quicksand_bold"
-            android:paddingLeft="@dimen/margin_medium_size_16"
-            android:paddingTop="@dimen/margin_xmedium_size_20"
-            android:paddingRight="@dimen/margin_small_9"
-            android:paddingBottom="@dimen/margin_xmedium_size_20"
+            android:gravity="center"
             android:text="100%"
             android:textColor="@color/black"
             android:textSize="@dimen/text_large_size_20" />

@@ -76,12 +76,12 @@ class StudentFragment : BaseFragment<FragmentStudentBinding>() {
         courseAdapter.setOnSelectedListener(object : OnItemClickListener{
             override fun onItemClick(itemView: View, position: Int) {
                 var bundle = Bundle()
-                bundle.putString("courses", courseAdapter.getCourse().get(position))
-                goToActivity()
+                bundle.putString("courses", courseAdapter.getCourse().get(position).name)
+                goToActivity(AttendanceDetailActivity::class.java, bundle, false)
             }
 
             override fun onItemLongClick(itemView: View, position: Int): Boolean {
-                TODO("Not yet implemented")
+                return true
             }
 
         })
