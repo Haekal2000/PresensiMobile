@@ -25,7 +25,7 @@ import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 
-class StudentFragment : BaseFragment<FragmentStudentBinding>() {
+class StudentFragment private constructor(): BaseFragment<FragmentStudentBinding>() {
     private lateinit var courseAdapter: CourseAdapter
     lateinit var viewModelCourse: CourseViewModel
     val courseLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
@@ -75,7 +75,8 @@ class StudentFragment : BaseFragment<FragmentStudentBinding>() {
     fun initAction() {
         courseAdapter.setOnSelectedListener(object : OnItemClickListener{
             override fun onItemClick(itemView: View, position: Int) {
-                var bundle = Bundle()
+                val bundle = Bundle()
+                bundle.putParcelable("key", )
                 bundle.putString("courses", courseAdapter.getCourse().get(position).name)
                 goToActivity(AttendanceDetailActivity::class.java, bundle, false)
             }

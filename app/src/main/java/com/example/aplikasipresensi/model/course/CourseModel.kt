@@ -1,9 +1,12 @@
 package com.example.aplikasipresensi.model.course
 
+import android.os.Parcelable
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
-class CourseModel {
+@Parcelize
+class CourseModel : Parcelable {
     @SerializedName("id")
     @Expose
     var id: String? = null

@@ -41,7 +41,8 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.nav_home -> {
-                selectedFragment = StudentFragment()
+                selectedFragment = StudentFragment.
+//                selectedFragment = TestFragment.newInstance()
             }
 
             R.id.nav_profile -> {
