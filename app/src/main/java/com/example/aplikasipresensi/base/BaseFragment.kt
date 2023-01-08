@@ -14,6 +14,7 @@ abstract class BaseFragment<vb: ViewBinding>: Fragment() {
     protected lateinit var bind: vb
     protected lateinit var remoteDataSource : RemoteDataSource
     protected lateinit var prefs: DataPreferences
+    var dataReceived: Bundle? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/input_course_code"
+        android:textSize="@dimen/text_xlarge_size_24"
+        android:textColor="@color/black"
+        android:fontFamily="@font/opensans_bold"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_course_code"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_xlarge_size_50"
+        app:errorEnabled="true"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/red_error">
+
+        <EditText
+            android:id="@+id/et_course_code"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/margin_xmedium_size_20"
+            android:layout_marginRight="@dimen/margin_xmedium_size_20"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rectangle"
+            android:fontFamily="@font/quicksand_medium"
+            android:inputType="text"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/text_xmedium_size_16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/margin_large_size_45"
+        android:layout_marginRight="@dimen/margin_large_size_45"
+        android:layout_marginBottom="@dimen/margin_large_size_45"
+        android:layout_height="@dimen/height_xmedium_42"
+        android:layout_marginTop="@dimen/margin_medium_small_size_10"
+        android:background="@drawable/bg_button"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_xmedium_size_16"
+        android:textStyle="bold" />
+</LinearLayout>

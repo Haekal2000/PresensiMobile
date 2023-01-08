@@ -18,8 +18,8 @@ class CourseViewModel(
     val courseResponse: LiveData<Resource<CourseResponse>>
         get() = _courseResponse
 
-    fun getListCourse(departmentId: String, academicPeriodId: String)
+    fun getListCourse(departmentId: String, academicPeriodId: String, studentId: String)
             = viewModelScope.launch {
-        _courseResponse.value = courseRepo.getListCourse(departmentId, academicPeriodId)
+        _courseResponse.value = courseRepo.getListCourse(departmentId, academicPeriodId, studentId)
     }
 }

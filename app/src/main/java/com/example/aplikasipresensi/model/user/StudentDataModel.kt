@@ -3,7 +3,7 @@ package com.example.aplikasipresensi.model.user
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class UserDataModel {
+class StudentDataModel {
     @SerializedName("name")
     @Expose
     var name: String? = null
@@ -19,6 +19,10 @@ class UserDataModel {
     @SerializedName("academic_period_id")
     @Expose
     var academicPeriodId: String? = null
+
+    @SerializedName("email")
+    @Expose
+    var email: String? = null
 
     @SerializedName("createdAt")
     @Expose

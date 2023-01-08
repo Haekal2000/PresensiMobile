@@ -1,18 +1,17 @@
 package com.example.aplikasipresensi.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.aplikasipresensi.R
 import com.example.aplikasipresensi.databinding.ItemCourseBinding
 import com.example.aplikasipresensi.listener.OnItemClickListener
 import com.example.aplikasipresensi.model.course.CourseModel
 
-class CourseAdapter(val context: Context): RecyclerView.Adapter<CourseAdapter.CourseViewHolder>() {
+class CourseAdapter(val listCourse: MutableList<CourseModel>): RecyclerView.Adapter<CourseAdapter.CourseViewHolder>() {
     private val course: MutableList<CourseModel> = mutableListOf()
+    private lateinit var itemDataListener: ItemDataListener
     private var onSelectedListener: OnItemClickListener? = null
 
     override fun onCreateViewHolder(
@@ -25,7 +24,10 @@ class CourseAdapter(val context: Context): RecyclerView.Adapter<CourseAdapter.Co
     }
 
     override fun onBindViewHolder(holder: CourseAdapter.CourseViewHolder, position: Int) {
-        holder.bindModel(course[position])
+        holder.bindModel(listCourse[position])
+        holder.itemView.setOnClickListener {
+            itemDataListener.itemDataClicked(listCourse[position])
+        }
         //tambahan
 //        holder.setIsRecyclable(false)
 //        holder.bindModel(course[0])
@@ -37,7 +39,15 @@ class CourseAdapter(val context: Context): RecyclerView.Adapter<CourseAdapter.Co
 //    }
 
     override fun getItemCount(): Int {
-        return course.size
+        return listCourse.size
+    }
+
+    fun setItemDataListener(itemDataListener: ItemDataListener) {
+        this.itemDataListener = itemDataListener
+    }
+
+    interface ItemDataListener {
+        fun itemDataClicked(course: CourseModel)
     }
 
     //tambahan
@@ -46,39 +56,39 @@ class CourseAdapter(val context: Context): RecyclerView.Adapter<CourseAdapter.Co
 //    }
 
     fun setCourse(data: List<CourseModel>) {
-        course.clear()
-        course.addAll(data)
+        listCourse.clear()
+        listCourse.addAll(data)
         notifyDataSetChanged()
 //        notifyItemChanged(0)
     }
 
     fun getCourse(): MutableList<CourseModel> {
-        return course
+        return listCourse
     }
 
     inner class CourseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvCourseCode: TextView = itemView.findViewById(R.id.tv_course_code)
-        val tvCourseName: TextView = itemView.findViewById(R.id.tv_course_name)
-        val tvDay: TextView = itemView.findViewById(R.id.tv_day)
-        val tvHours: TextView = itemView.findViewById(R.id.tv_hours)
-        val tvRoom: TextView = itemView.findViewById(R.id.tv_room)
-//        private val bind: ItemCourseBinding
-//        init {
-//            bind = ItemCourseBinding.bind(itemView)
-//        }
+//        val tvCourseCode: TextView = itemView.findViewById(R.id.tv_course_code)
+//        val tvCourseName: TextView = itemView.findViewById(R.id.tv_course_name)
+//        val tvDay: TextView = itemView.findViewById(R.id.tv_day)
+//        val tvHours: TextView = itemView.findViewById(R.id.tv_hours)
+//        val tvRoom: TextView = itemView.findViewById(R.id.tv_room)
+        private val bind: ItemCourseBinding
+        init {
+            bind = ItemCourseBinding.bind(itemView)
+        }
 
         fun bindModel(c: CourseModel) {
-            tvCourseCode.text = c.id
-            tvCourseName.text = c.name
-            tvDay.text = c.day
-            tvHours.text = c.hours
-            tvRoom.text = c.room
+//            tvCourseCode.text = c.id
+//            tvCourseName.text = c.name
+//            tvDay.text = c.day
+//            tvHours.text = c.hours
+//            tvRoom.text = c.room
 
-//            bind.tvCourseCode.text = c.id
-//            bind.tvCourseName.text = c.name
-//            bind.tvDay.text = c.day
-//            bind.tvHours.text = c.hours
-//            bind.tvRoom.text = c.room
+            bind.tvCourseCode.text = c.id
+            bind.tvCourseName.text = c.course?.name
+            bind.tvDay.text = c.day
+            bind.tvHours.text = c.hours
+            bind.tvRoom.text = c.room
         }
 
         init {

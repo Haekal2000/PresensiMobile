@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -69,4 +70,8 @@ dependencies {
 
     //Recyclerview
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    //Scan Barcode
+    implementation 'com.github.yuriy-budiyev:code-scanner:2.3.2'
+//    implementation 'me.dm7.barcodescanner:zxing:1.9.8'
 }

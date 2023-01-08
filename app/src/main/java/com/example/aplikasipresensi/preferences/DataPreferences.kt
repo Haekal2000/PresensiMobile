@@ -32,6 +32,28 @@ class DataPreferences(
         }
     }
 
+    val getTokenTeacher: Flow<String>
+    get() = dataStore.data.map { p ->
+        p[TOKENTEACHER] ?: ""
+    }
+
+    suspend fun setTokenTeacher(value: String){
+        dataStore.edit { p ->
+            p[TOKENTEACHER] = value
+        }
+    }
+
+    val getNik: Flow<String>
+    get() = dataStore.data.map { p ->
+        p[NIK] ?: ""
+    }
+
+    suspend fun setNik(value: String){
+        dataStore.edit { p ->
+            p[NIK] = value
+        }
+    }
+
     val getNrpId: Flow<String>
     get() = dataStore.data.map { p ->
         p[NRP] ?: ""
@@ -100,6 +122,8 @@ class DataPreferences(
 
     companion object{
         private val TOKEN = preferencesKey<String>("token")
+        private val TOKENTEACHER = preferencesKey<String>("token_teacher")
+        private val NIK = preferencesKey<String>("lecturer_nik")
         private val NRP = preferencesKey<String>("nrpId")
         private val NAME = preferencesKey<String>("name")
         private val DEPARTMENTID = preferencesKey<String>("department_id")

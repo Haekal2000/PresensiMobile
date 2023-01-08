@@ -5,10 +5,10 @@ import com.example.aplikasipresensi.api.CourseApi
 import com.example.aplikasipresensi.base.BaseRepository
 
 class CourseRepository(
-   val service: CourseApi,
+   val service: CourseApi
 ) : BaseRepository() {
 
-    suspend fun getListCourse(departmentId: String, academicPeriodId: String) = handlingApiCall {
-        service.getListCourse(departmentId, academicPeriodId)
+    suspend fun getListCourse(departmentId: String, academicPeriodId: String, studentId: String) = handlingApiCall {
+        service.getListCourse(departmentId, academicPeriodId, studentId)
     }
 }

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.teacherHome.views.StudentAttendanceActivity">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small_7"
+        android:layout_marginTop="@dimen/margin_medium_small_size_10"
+        android:src="@drawable/ic_left_arrow" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_xmedium_size_27"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_medium_size_16"
+        android:paddingRight="@dimen/margin_medium_size_16">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:text="@string/attendace_course_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_xxlarge_size_36" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xsmall_size_3"
+            android:fontFamily="@font/opensans_bold"
+            android:text="@string/attendace_course_type"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_xlarge_size_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xsmall_size_3"
+            android:fontFamily="@font/opensans_bold"
+            android:text="@string/teacher_course_room"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_xlarge_size_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_xlarge_size_24"
+            android:layout_marginTop="@dimen/margin_xsmall_size_3"
+            android:text="10 September 2022"
+            android:fontFamily="@font/opensans_bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_xsmall_size_2"
+        android:layout_marginTop="@dimen/margin_medium_small_size_13"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium_small_size_13"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_student_attendance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_student_attendance" />
+    </LinearLayout>
+</LinearLayout>

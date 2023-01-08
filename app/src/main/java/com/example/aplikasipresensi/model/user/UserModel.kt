@@ -7,8 +7,4 @@ class UserModel {
     @SerializedName("token")
     @Expose
     var token: String? = null
-
-    @SerializedName("userData")
-    @Expose
-    var userData: UserDataModel? = null
 }

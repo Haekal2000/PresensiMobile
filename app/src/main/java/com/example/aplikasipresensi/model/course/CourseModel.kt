@@ -1,26 +1,37 @@
 package com.example.aplikasipresensi.model.course
 
+import android.os.Parcelable
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
-class CourseModel {
+@Parcelize
+class CourseModel : Parcelable {
     @SerializedName("id")
     @Expose
     var id: String? = null
 
-    @SerializedName("name")
+    @SerializedName("course_id")
     @Expose
-    var name: String? = null
+    var courseId: String? = null
 
-    @SerializedName("credits")
+    @SerializedName("lecturer_nik")
     @Expose
-    var credits: String? = null
+    var lecturerNik: String? = null
 
-    @SerializedName("department_id")
+    @SerializedName("method")
     @Expose
-    var departmentId: String? = null
+    var method: String? = null
 
-    @SerializedName("academicPeriodId")
+    @SerializedName("createdAt")
+    @Expose
+    var createdAt: String? = null
+
+    @SerializedName("updatedAt")
+    @Expose
+    var updatedAt: String? = null
+
+    @SerializedName("academic_period_id")
     @Expose
     var academicPeriodId: String? = null
 
@@ -35,4 +46,12 @@ class CourseModel {
     @SerializedName("room")
     @Expose
     var room: String? = null
+
+    @SerializedName("course")
+    @Expose
+    var course: StudentCourseModel? = null
+
+    @SerializedName("studentrecord")
+    @Expose
+    var studentRecord: MutableList<StudentRecordModel>? = null
 }

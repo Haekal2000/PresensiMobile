@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.teacherHome.views.AttendanceSessionActivity">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium_small_size_10"
+        android:layout_marginLeft="@dimen/margin_medium_small_size_11"
+        android:src="@drawable/ic_left_arrow" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_medium_size_16"
+        android:paddingRight="@dimen/margin_medium_size_16">
+
+        <RelativeLayout
+            android:id="@+id/rl_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_welcome"
+            android:layout_marginTop="@dimen/margin_xmedium_size_28"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/biru_cyan">
+
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_xmedium_size_24"
+                android:layout_marginRight="@dimen/margin_medium_size_15"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Monday,"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_xxlarge_size_36" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_day"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/margin_medium_size_15"
+                android:layout_marginBottom="@dimen/margin_xmedium_size_24"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="19 September 2022"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_xxlarge_size_36" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xmedium_size_19"
+            android:fontFamily="@font/opensans_bold"
+            android:text="@string/attendace_course_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_xxlarge_size_36" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xsmall_size_3"
+            android:fontFamily="@font/opensans_bold"
+            android:text="@string/attendace_course_type"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_xlarge_size_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xsmall_size_3"
+            android:fontFamily="@font/opensans_bold"
+            android:text="@string/teacher_course_room"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_xlarge_size_24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_xsmall_size_2"
+        android:layout_marginTop="@dimen/margin_medium_small_size_13"
+        android:background="@color/black"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_medium_size_16"
+        android:paddingRight="@dimen/margin_medium_size_16"
+        android:layout_marginTop="@dimen/margin_medium_small_size_12">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_xxlarge_size_32"
+            android:fontFamily="@font/opensans_bold"
+            android:text="@string/accept_response"/>
+        
+        <Switch
+            android:id="@+id/sw_close_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_medium_size_16"
+        android:paddingRight="@dimen/margin_medium_size_16"
+        android:justificationMode="inter_word"
+        android:lineSpacingExtra="@dimen/margin_small_size_5"
+        android:layout_marginTop="@dimen/margin_xmedium_size_31"
+        android:textSize="@dimen/text_xmedium_size_16"
+        android:textColor="@color/black"
+        android:fontFamily="@font/opensans_bold"
+        android:text="@string/warning"/>
+
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/btn_start_send_email"-->
+<!--        android:layout_width="@dimen/margin_xxlarge_size_89"-->
+<!--        android:layout_height="@dimen/margin_xmedium_size_34"-->
+<!--        android:layout_marginTop="@dimen/margin_xmedium_size_30"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:background="@drawable/bg_round_rectangle"-->
+<!--        android:fontFamily="@font/opensans_bold"-->
+<!--        android:text="@string/start"-->
+<!--        android:textSize="@dimen/text_xmedium_size_16" />-->
+
+</LinearLayout>

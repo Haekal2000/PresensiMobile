@@ -23,6 +23,7 @@
     <dimen name="text_xlarge_size_28">28sp</dimen>
     <dimen name="text_xxlarge_size_30">30sp</dimen>
     <dimen name="text_xxlarge_size_32">32sp</dimen>
+    <dimen name="text_xxlarge_size_36">36sp</dimen>
     <dimen name="text_xxxlarge_size_40">40sp</dimen>
 
     <!--LAYOUT MARGIN-->
@@ -101,6 +102,7 @@
     <dimen name="margin_xxlarge_size_70">70dp</dimen>
     <dimen name="margin_xxlarge_size_73">73dp</dimen>
     <dimen name="margin_xxlarge_size_85">85dp</dimen>
+    <dimen name="margin_xxlarge_size_89">89dp</dimen>
     <dimen name="margin_xxlarge_size_93">93dp</dimen>
     <dimen name="margin_xxxlarge_size_116">116dp</dimen>
     <dimen name="margin_xxxlarge_size_118">118dp</dimen>

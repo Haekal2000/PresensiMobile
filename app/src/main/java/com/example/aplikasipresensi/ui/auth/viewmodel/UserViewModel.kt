@@ -26,20 +26,4 @@ class UserViewModel(
     fun setToken(token: String) = viewModelScope.launch {
         userRepo.setToken(token)
     }
-
-    fun setNrpId(nrpId: String) = viewModelScope.launch {
-        userRepo.setNrpId(nrpId)
-    }
-
-    fun setName(name: String) = viewModelScope.launch {
-        userRepo.setName(name)
-    }
-
-    fun setDepartmentId(departmentId: String) = viewModelScope.launch {
-        userRepo.setDepartmentId(departmentId)
-    }
-
-    fun setAcademicPeriodId(academicPeriodId: String) = viewModelScope.launch {
-        userRepo.setAcademicPeriodId(academicPeriodId)
-    }
 }

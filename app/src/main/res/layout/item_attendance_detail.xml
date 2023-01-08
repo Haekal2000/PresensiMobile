@@ -9,7 +9,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/tv_percent"
+            android:id="@+id/tv_number"
             android:layout_width="@dimen/margin_xxlarge_size_62"
             android:layout_height="@dimen/margin_xxlarge_size_62"
             android:background="@drawable/bg_round_rectangle"
@@ -23,16 +23,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_xmedium_size_23"
-            android:layout_toRightOf="@+id/tv_percent"
+            android:layout_toRightOf="@+id/tv_number"
             android:gravity="center_vertical"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_course_code"
+                android:id="@+id/tv_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/opensans_bold"
-                android:text="@string/cource_code"
+                android:text="10 September 2022"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_xmedium_size_18" />
 
