@@ -6,6 +6,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.lifecycle.asLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.aplikasipresensi.adapter.TeacherCourseAdapter
 import com.example.aplikasipresensi.adapter.TeacherCourseAdapterTesting
@@ -158,20 +160,27 @@ class TeacherFragment: BaseFragment<FragmentTeacherBinding>() {
     }
 
     fun initView() {
+        prefs.getNik.asLiveData().observe(requireActivity(), Observer{
+            bind.tvUserNik.text = it
+        })
+
         bind.rvTeacherCourse.layoutManager = teacherCourseLayoutManager
         bind.rvTeacherCourse.clipChildren = false
+        bind.rvTeacherCourse.clipToPadding = false
         teacherCourseAdapterTesting = TeacherCourseAdapterTesting(requireActivity())
         bind.rvTeacherCourse.adapter = teacherCourseAdapterTesting
         viewModelTeacherCourse.getListTeacherCourse("710071")
+//        viewModelTeacherCourse.getListTeacherCourse(runBlocking { prefs.getNik.first() })
         viewModelTeacherCourse.teacherCourseResponse.observe(requireActivity()) {
             when(it) {
                 is Resource.Success -> {
                     teacherCourseAdapterTesting.setTeacherCourses(it.value.data!!)
-                    Log.e("knpp", it.toString())
+                    Log.e("rv BERHASIL", it.toString())
 //                    it.value.data?.let { it1 -> teacherCourseAdapterTesting.setTeacherCourses(it1) }
                     Snackbar.make(bind.llTeacherFragment, "rv muncul", Snackbar.LENGTH_LONG).show()
                 }
                 is Resource.Failure -> {
+                    Log.e("rv GAGAL", it.toString())
                     Snackbar.make(bind.llTeacherFragment, "rv gagal", Snackbar.LENGTH_LONG).show()
                 }
             }

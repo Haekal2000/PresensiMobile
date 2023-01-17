@@ -51,5 +51,5 @@ class TeacherCourseModel : Parcelable {
 
     @SerializedName("course")
     @Expose
-    var course: StudentCourseModel? = null
+    var course: TeacherCourseNameModel? = null
 }

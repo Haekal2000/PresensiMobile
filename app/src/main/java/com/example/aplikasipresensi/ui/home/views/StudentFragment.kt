@@ -143,7 +143,6 @@ class StudentFragment : BaseFragment<FragmentStudentBinding>() {
     fun initView() {
         prefs.getNrpId.asLiveData().observe(requireActivity(), Observer {
             bind.tvUserNrp.text = it
-            Log.e("nama", prefs.getNrpId.toString())
         })
 
         bind.rvCourse.layoutManager = courseLayoutManager
@@ -151,13 +150,11 @@ class StudentFragment : BaseFragment<FragmentStudentBinding>() {
         bind.rvCourse.clipToPadding = false
         courseAdapterTesting = CourseAdapterTesting(requireContext())
         bind.rvCourse.adapter = courseAdapterTesting
-        viewModelCourse.getListCourse("46c0d3ec-0063-4f26-8f14-6be3bbe99f07", "28104643-57bb-466b-9a68-091f3322c450", "1973010")
-        Log.e("LISSTTTT", viewModelCourse.getListCourse("46c0d3ec-0063-4f26-8f14-6be3bbe99f07", "28104643-57bb-466b-9a68-091f3322c450", "1973010").toString())
+        viewModelCourse.getListCourse(runBlocking { prefs.getDepartmentId.first() }, runBlocking { prefs.getAcademicPeriodId.first() }, runBlocking { prefs.getNrpId.first() })
         viewModelCourse.courseResponse.observe(requireActivity()) {
             when(it) {
                 is Resource.Success -> {
                     it.value.data?.let { it1 ->  courseAdapterTesting.setCourse(it1)}
-//                    courseAdapter.setCourse(it.value.data!!)
                     Snackbar.make(bind.llStudentFragment, "rv muncul", Snackbar.LENGTH_LONG).show()
                 }
                 is Resource.Failure -> {

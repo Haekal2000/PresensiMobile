@@ -65,6 +65,7 @@ class TeacherLoginActivity : BaseActivity<ActivityTeacherLoginBinding>() {
             request.nik = bind.etNik.text.toString().trim()
             request.password = bind.etPassword.text.toString().trim()
             viewModelTeacherUser.teacherLogin(request)
+
             viewModelTeacherData.getTeacherData(bind.etNik.text.toString())
             prefs.getToken.asLiveData().observe(this) {
                 viewModelTeacherData.teacherDataResponse.observe(this) {

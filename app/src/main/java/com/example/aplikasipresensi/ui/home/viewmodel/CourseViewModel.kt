@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.aplikasipresensi.network.Resource
 import com.example.aplikasipresensi.repository.CourseRepository
 import com.example.aplikasipresensi.responses.CourseResponse
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class CourseViewModel(
@@ -20,6 +21,7 @@ class CourseViewModel(
 
     fun getListCourse(departmentId: String, academicPeriodId: String, studentId: String)
             = viewModelScope.launch {
+        delay(250)
         _courseResponse.value = courseRepo.getListCourse(departmentId, academicPeriodId, studentId)
     }
 }

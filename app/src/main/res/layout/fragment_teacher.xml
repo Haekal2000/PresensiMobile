@@ -36,7 +36,7 @@
                     android:textSize="@dimen/text_large_size_20" />
 
                 <TextView
-                    android:id="@+id/tv_user_nrp"
+                    android:id="@+id/tv_user_nik"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_xmedium_size_33"

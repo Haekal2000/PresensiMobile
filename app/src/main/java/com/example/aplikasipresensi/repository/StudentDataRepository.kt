@@ -13,10 +13,6 @@ class StudentDataRepository(
         service.getStudentData(nrpId)
     }
 
-    suspend fun setToken(token: String) {
-        preference.setToken(token)
-    }
-
     suspend fun setNrpId(nrpId: String) {
         preference.setNrpId(nrpId)
     }

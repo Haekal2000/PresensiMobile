@@ -65,6 +65,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             request.nrpId = bind.etNrp.text.toString().trim()
             request.password = bind.etPassword.text.toString().trim()
             viewModelUser.login(request)
+
             viewModelStudentData.getStudentData(bind.etNrp.text.toString())
             prefs.getToken.asLiveData().observe(this) {
             viewModelStudentData.studentDataResponse.observe(this) {

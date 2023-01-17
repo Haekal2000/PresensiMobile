@@ -20,7 +20,7 @@ class TeacherDataViewModel(
 
     fun getTeacherData(nik: String)
             = viewModelScope.launch {
-        delay(3000)
+        delay(100)
         _teacherDataResponse.value = teacherDataRepo.getTeacherData(nik)
     }
 

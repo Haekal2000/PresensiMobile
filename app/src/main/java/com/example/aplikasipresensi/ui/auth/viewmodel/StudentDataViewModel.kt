@@ -20,12 +20,8 @@ class StudentDataViewModel(
 
     fun getStudentData(nrpId: String)
             = viewModelScope.launch {
-        delay(3000)
+        delay(100)
         _studentDataResponse.value = studentDataRepo.getStudentData(nrpId)
-    }
-
-    fun setToken(token: String) = viewModelScope.launch {
-        studentDataRepo.setToken(token)
     }
 
     fun setNrpId(nrpId: String) = viewModelScope.launch {
